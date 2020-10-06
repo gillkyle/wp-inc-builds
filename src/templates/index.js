@@ -6,6 +6,7 @@ export default ({ data }) => (
     <h1>{data.wpPost.title}</h1>
     <div>{data.wpPost.flexibleContent.post}</div>
     <div>{data.wpPost.flexibleContent.date}</div>
+    <div>{data.wpPost.flexibleContent.slug}</div>
   </div>
 )
 
@@ -13,6 +14,7 @@ export const query = graphql`
   query post($id: String!) {
     wpPost(id: { eq: $id }) {
       id
+      slug
       title
       slug
       date
