@@ -5,6 +5,7 @@ export default ({ data }) => (
   <div style={{ background: `cyan`, padding: 64 }}>
     <h1>{data.wpPost.title}</h1>
     <div>{data.wpPost.flexibleContent.post}</div>
+    <div>{data.wpPost.flexibleContent.date}</div>
   </div>
 )
 
@@ -14,6 +15,7 @@ export const query = graphql`
       id
       title
       slug
+      date
       flexibleContent {
         post
       }
